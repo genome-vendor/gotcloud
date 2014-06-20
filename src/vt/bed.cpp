@@ -23,6 +23,18 @@ THE SOFTWARE.
 
 #include "bed.h"
 
+#include <sstream>
+
+namespace {
+    template<typename T>
+    std::string to_string_fix(T const& x) {
+        std::stringstream ss;
+        ss << x;
+        return ss.str();
+    }
+
+}
+
 /**
  * Constructor.
  */
@@ -59,5 +71,5 @@ void BEDRecord::print()
  */
 std::string BEDRecord::to_string()
 {
-    return  this->chrom + ":" + std::to_string(this->start1) + "-" + std::to_string(this->end1);
+    return  this->chrom + ":" + to_string_fix(this->start1) + "-" + to_string_fix(this->end1);
 };
