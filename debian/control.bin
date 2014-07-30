@@ -7,7 +7,7 @@ Homepage: http://genome.sph.umich.edu/wiki/GotCloud
 
 Package: gotcloud-bin
 Architecture: amd64
-#Depends: gotcloud-bin
-Recommends: make,libssl0.9.8,biopipe-umake-test
+Depends: make,libssl0.9.8,java-common,default-jre
+Recommends: biopipe-umake-test
 Description: gotcloud-bin
  GotCloud is a set of software to MKT FINISH THIS
