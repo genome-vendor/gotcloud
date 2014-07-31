@@ -175,7 +175,7 @@ echo "Tar file created"
 ls -la $top/$tarpkg.tar.gz
 
 #   Clean up and exit
-rm -rf ../${pkg}*.changes debian/files debian/tmp $efile  /tmp/xxremove
+#rm -rf ../${pkg}*.changes debian/files debian/tmp $efile  /tmp/xxremove
 for f in $tempfiles; do
   rm -f debian/$f
 done
