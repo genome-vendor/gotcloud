@@ -150,7 +150,7 @@ if [ "$p" = "" ]; then
   export DEB=no                         # Hack to avoid debian commands
   make -k -f debian/rules binary
 else
-  dpkg-buildpackage -b -us -uc -rfakeroot 2>> $efile
+  dpkg-buildpackage -b -us -uc -rfakeroot --changes-option='-DDistribution=lucid-genome-development' 2>> $efile
   if [ "$?" != "0" ]; then
     a=`grep 'not including any source code' $efile`
     if [ "$a" = "" ]; then
